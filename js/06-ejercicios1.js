@@ -115,7 +115,7 @@ for (var i = 1; i <= num; i++) {
  * # 2.- Si no es valido pedir el numero de nuevo
  */
 
-var num = parseInt(prompt("ingresa un numero", 0));
+/*var num = parseInt(prompt("ingresa un numero", 0));
 
 while (isNaN(num) || num <= 0) {
   num = parseInt(prompt("Por favor ingresa un NUMERO", 0));
@@ -125,4 +125,57 @@ if (num % 2 == 0) {
   document.write("<p>El numero " + num + " es par");
 } else {
   document.write("<p>El numero " + num + " es impar");
+}*/
+
+/**
+ * ! EJERCICIO 7
+ * # Tabla de multiplicar de un numero introducido por pantalla
+ */
+
+/*var num = parseInt(
+  prompt("Ingrese el numero que desea ver su tabla de multiplicar", 1)
+);
+
+while (isNaN(num) || num <= 0) {
+  num = parseInt(
+    prompt("Favor de ingresar un numero para ver su tabla de multiplicar", 1)
+  );
 }
+
+document.write("<p>La tabla de multiplicar del numero " + num + " es:</p>");
+for (var i = 1; i <= 10; i++) {
+  document.write(num + "x" + i + " = " + num * i + "<br>");
+}*/
+
+/**
+ * ! EJERCICIO 8
+ * # Calculadora
+ * # 1.- Pida dos numeros al usuario
+ * # 2.- Si los numeros son incorrectos, volverlos a pedir
+ * # 3.- Mostrar en el body de la pagina, en un alert y en consola el resultado de sumar, restar, multiplicar y dividir esas cifras pedidas
+ */
+
+var x = parseInt(prompt("Ingresa el primer numero", 0));
+var y = parseInt(prompt("Ingresa el segundo numero", 0));
+
+while (isNaN(x) || isNaN(y) || x <= 0 || y <= 0) {
+  x = parseInt(prompt("Favor de ingresa el primer NUMERO", 0));
+  y = parseInt(prompt("Favor de ingresa el segundo NUMERO", 0));
+}
+
+var result = `</p>Resultado de las operaciones: <br><br>
+                  suma: ` + x + `+` + y + ` = ` + (x + y) + `<br>
+                  resta: ` + x + `-` + y + ` = ` + (x-y) + `<br>
+                  multiplicacion: ` + x + `x` + y + ` = ` + (x*y) + `<br>
+                  division: ` + x + `/` + y + ` = ` + (x/y).toFixed(2) + `</p>`;
+
+// * .toFixed, permite redondear un valor dependiendo los decimales que indiquemos
+var resultCMD = `</p>Resultado de las operaciones: 
+                  suma: ` + x + `+` + y + ` = ` + (x+y) + `
+                  resta: ` + x + `-` + y + ` = ` + (x-y) + `
+                  multiplicacion: ` + x + `x` + y + ` = ` + (x*y) + `
+                  division: ` + x + `/` + y + ` = ` + (x/y).toFixed(2);
+
+document.write(result);
+alert(resultCMD);
+console.log(resultCMD);
