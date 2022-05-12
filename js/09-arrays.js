@@ -81,3 +81,38 @@ var search = languages.find(keyword => keyword == "PHP");
 // * Para buscar la posicion en la que se encuentra lo que estamos buscando se hace lo sig
 search = languages.findIndex(keyword => keyword == "PHP");
 console.log(search);
+
+// * Para buscar un valor acorde a una condicion, podemos hacer uso del some, esto devuelve true o false
+var calf = ['10','9','7','6','5','10'];
+var aprobado = calf.some(result => result >= '7');
+console.log(aprobado);
+
+// * Para agregar un valor al inicio de un array ocupamos unshift y para quitarlo agramos shift
+let num = ['1','2','3','4','5'];
+let byenum = num.shift();
+console.log(num, byenum);
+console.log(num.unshift('0'));
+
+// * Para realizar una copia de ciertos valores de un array, el primer valor indica en donde comienza y el segundo donde termina
+const val = ['1','2','3','4','5'];
+const newValues = val.slice(1, 2);
+console.log(newValues);
+
+// *Para realizar un corte en un array o agregar un valor mas dentro de un array podemos usar splice
+// ! Para Eliminar, el primer valor indica donde empieza, el segundo cuantos eliminara apartir del empiezo
+let values = ['1','2','3'];
+values.splice(1,1);
+console.log(values); // 1 3
+
+// ! Para agregar un elemento mas, el indicador de eliminar lo dejamos cero y agregamos otro valor que seria lo que se agregara al array
+let text = ['a','b','c'];
+values.splice(1,0,'Hola mundo');
+console.log(values); // a hola mundo b c 
+
+// * forma de copiar un array
+let newArr = [1,2,3];
+let arr2 = [...newArr];
+console.log(newArr);
+arr2.push(4);
+arr2.unshift(22);
+console.log(arr2);

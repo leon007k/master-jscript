@@ -27,3 +27,11 @@ console.log(convert);
 
 // @ con el typeof podremos saber el tipo de dato que es la variable
 console.log(typeof number, typeof float, typeof num, typeof bool);
+
+// * si queremos sumar un numero con una cadena, podemos hacer lo siguiente
+let num = 100;
+let stringnum = "200";
+let result = num + stringnum;
+console.log("num + stringnum = " + result.toString());
+result = num + (+stringnum);
+console.log("num + (+stringnum) = " + result.toString());
